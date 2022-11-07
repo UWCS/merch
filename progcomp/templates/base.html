@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %} - UWCS Challenge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js "></script>
+  <script src="{{ url_for('static', filename='countdown.js') }}"></script>
+  <script src="{{ url_for('static', filename='darkmode.js') }}"></script>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <div class="container min-vh-100 d-flex flex-column align-items-center">
+    <nav class="w-100 navbar navbar-expand-lg rounded-bottom bg-primary-subtle" style="min-width: fit-content">
+      <div class="container-fluid align-items-center">
+        <a class="navbar-brand" href="/">
+          {% include "chall_logo.html" %}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav d-flex w-100">
+            <li class="nav-item">
+              <a class="nav-link text-nowrap" href="/#">
+                {% if progcomp %}
+                <span class="d-lg-none ms-lg-0">Competition: </span>{{ progcomp.name }}
+                {% else %}
+                Login
+                {% endif %}
+              </a>
+            </li>
+            {% if progcomp %}
+            <div class="vr d-none d-lg-block mx-1"></div>
+            <li class="nav-item">
+              <a class="nav-link" href="/submissions">Submissions</a>
+            </li>
+            {% for p in progcomp.visible_problems %}
+            <li class="nav-item">
+              <a class="nav-link" href="/problems/{{ p.name }}">Problem&nbsp;{{ p.name }}</a>
+            </li>
+            {% endfor %}
+            {% if progcomp.show_leaderboard %}
+            <li class="nav-item">
+              <a class="nav-link" href="/leaderboard">Leaderboard</a>
+            </li>
+            {% endif %}
+            {% endif %}
+            <div class="vr ms-md-auto d-none d-lg-block "></div>
+            <li class="nav-item ms-lg-2">
+              <a id="dark-mode" class="nav-link ml-1" href="#">
+                <i class="bi-moon-fill"></i>
+                <span class="d-lg-none ms-2 ms-lg-0">Toggle Dark Mode</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="w-100 d-flex flex-column gap-3 px-3">
+      {% for alert in progcomp.alerts %}
+      <div class="alert alert-success px-3 py-2 mt-3 mb-0" role="alert">
+        {% if alert.title %}<h5 class="alert-heading">{{ alert.title }}</h5>{% endif %}
+        {% if alert.text %}{{ alert.text }}</h4>{% endif %}
+      </div>
+      {% endfor %}
+    </header>
+
+    <article id="content" class="w-100">
+      {% block content %}{% endblock %}
+    </article>
+
+    <footer class="w-100 mt-auto d-flex flex-wrap justify-content-between gap-2 py-3 mt-4 border-top">
+      <div class="flex-grow-1 flex-md-grow-0 mb-0 text-muted">
+        {% if progcomp %}
+        {% set visibility = progcomp.visible|string() %}
+        {% if visibility == "Open" %}
+        {% set row_color = 'text-bg-success' %}
+        {% elif visibility == "Closed" %}
+        {% set row_color = 'text-bg-danger' %}
+        {% else %}
+        {% set row_color = "text-bg-warning" %}
+        {% endif %}
+        {{ progcomp.name }}
+        <small class="badge {{ row_color }}" style="height: fit-content">{{ progcomp.visible }}</small> |
+        {% if username %}
+        Team: {{ username }} |
+        {% endif %}
+        <span id="countdown">Countdown soonTM</span>
+        {% endif %}
+      </div>
+      <div class="d-md-none" style="flex-basis: 100%; height: 0"></div>
+      <a class="d-flex text-decoration-none" href="https://uwcs.co.uk">
+        {% include "uwcs_logo.html" %}
+      </a>
+
+      <ul class="nav justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="https://github.com/UWCS/progcomp-web"><i class="bi-github"
+              aria-hidden="true"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://discord.uwcs.co.uk"><i class="bi-discord" aria-hidden="true"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://uwcs.co.uk"><i class="bi-globe" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Problem {{ problem.name }}{% endblock %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='keep_selected.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="row pt-5" id="header">
+    <h3>Problem <b>{{ problem.name }}</b></span></h3>
+</div>
+
+<h4>Download Input Test Data</h4><br>
+<div class="d-flex flex-wrap gap-2">
+    {% for test in problem.tests %}
+    <a class="flex-grow-1 btn btn-primary" style="min-width: max-content;"
+        href="{{ url_for('progcomp.download', p_name=problem.name, t_name=test.name+'.txt') }}">
+        <i class="bi-download me-1"></i>&nbsp;{{ test.name }}</a>
+    {% endfor %}
+</div>
+
+<hr>
+<br>
+{% if problem.open %}
+<form method=post enctype=multipart/form-data>
+    <h4>Submit Results</h4>
+    <div class="d-flex flex-wrap align-items-center gap-4">
+        <div>
+            <label for="test_select" class="form-label m-0 fw-bold" style="min-width: max-content">Select Input
+                Data:</label>
+        </div>
+        <div class="flex-grow-1">
+            <select class="form-select" id="test_select" name="test_select">
+                {% for test in problem.tests %}
+                <option value="{{ test.name }}">{{ test.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <button id="prob_submit" type="submit" class="btn btn-primary btn-lg align-bottom">Submit</button>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex flex-wrap gap-2">
+        <div class="p-2 flex-grow-1">
+            <label for="output" class="form-label fw-bold">Upload Solution Results</label>
+            <input class="form-control" type=file name=output accept=".txt,.out">
+        </div>
+        <div class="p-2 flex-grow-1">
+            <label for="script" class="form-label"><b>Upload Script</b> (for verification)</label>
+            <input class="form-control" type=file name=script>
+        </div>
+    </div>
+    <br>
+</form>
+
+{% else %}
+<h4>Submissions Closed!</h4>
+{% endif %}
+
+{% endblock %}
