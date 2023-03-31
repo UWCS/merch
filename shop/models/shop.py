@@ -11,8 +11,6 @@ from sqlalchemy.orm import relationship
 from shop.models import utils
 from shop.models.alert import Alert
 from shop.models.item import Item
-from shop.models.submission import Submission
-from shop.models.team import Team
 from shop.models.utils import Status, Visibility, auto_str
 
 from ..database import Base, db

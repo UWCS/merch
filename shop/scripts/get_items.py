@@ -5,3 +5,5 @@ with app.app_context():
         print("\n", shop)
         for item in shop.items:
             print("\n\t", item)
+            for img in item.images:
+                print("\t\t", img)

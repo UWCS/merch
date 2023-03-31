@@ -11,14 +11,14 @@ else:
     print("Level must be one of `open`, `closed` or `hidden`.")
 
 with app.app_context():
-    pc = db.session.query(Shop).where(Shop.name == script_shop()).first()
-    pr = (
+    shop = db.session.query(Shop).first()
+    item = (
         db.session.query(Item)
-        .filter(Item.shop_id == pc.id)
+        .filter(Item.shop_id == shop.id)
         .filter(Item.name == sys.argv[1])
         .first()
     )
-    print(pr)
-    pr.visibility = level
-    print(pr)
+    print(item)
+    item.visibility = level
+    print(item)
     db.session.commit()
