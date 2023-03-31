@@ -1,9 +1,9 @@
 submissions/**
 /.vscode
 /problems
-/progcomp.log
+/shop.log
 /.env
-/progcomp/scripts/custom.py
+/shop/scripts/custom.py
 
 __pycache__
 /instance

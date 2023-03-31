@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% macro shop_badge(shop) -%}
+{% set visibility = shop.visible|string() %}
+{% if visibility == "Open" %}{% set row_color = 'text-bg-success' %}
+{% elif visibility == "Closed" %}{% set row_color = 'text-bg-danger' %}
+{% else %}{% set row_color = "text-bg-warning" %}
+{% endif %}
+<small class="badge {{ row_color }}">{{ shop.visible }}</small>
+{%- endmacro %}
+
+{% block content %}
+
+<div class="row row-cols-2 gap-4">
+    {% for item in items %}
+    {% with item=item %}
+    {% include 'card.html' %}
+    {% endwith %}
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -12,6 +12,8 @@ click = "*"
 python-dotenv = "*"
 dateparser = "*"
 flask-migrate = "*"
+sqlalchemy-utils = "*"
+markdown = "*"
 
 [dev-packages]
 black = "23.1"

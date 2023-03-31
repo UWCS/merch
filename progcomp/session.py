@@ -1,2 +1,0 @@
-USERNAME_SESSION_KEY = "username"
-PROGCOMP_SESSION_KEY = "progcomp"
