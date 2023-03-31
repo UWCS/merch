@@ -1,6 +1,31 @@
-<div class="card p-0 flex-shrink-1" style="width: 18rem; max-width:23%; max-height: 32rem">
-    <img src="{{ shop.image_url }}" class="card-img-top" alt="...">
-    <h5 class="card-title mt-2 mx-2">{{ shop.name }}</h5>
-    <p class="card-text flex-grow-1 overflow-scroll mx-2">{{ shop.description }}</p>
-    <a class="btn btn-success mx-2 mb-2" href="{{ shop.url }}">Buy</a>
+<div class="card mb-3 ps-0 w-100">
+    <div class="d-flex">
+        <div id="carousel-{{ item.id }}" class="carousel slide w-100">
+            <div class="carousel-inner">
+                {% for image in item.images %}
+                <div class="carousel-item rounded-start{% if loop.first %} active{% endif %}" {% if not loop.first %}
+                    loading="lazy" {% endif %}>
+                    <img src=" {{ image.url }}" class="d-block w-100" alt="">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ item.id }}"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ item.id }}"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.desc_md|safe }}</p>
+            </div>
+        </div>
+    </div>
 </div>
