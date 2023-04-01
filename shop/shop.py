@@ -22,9 +22,21 @@ class Category:
 
 
 @dataclass
+class Alert:
+    title: str
+    desc: str
+    type: str = "success"
+
+    @property
+    def desc_md(self):
+        return markdown(self.desc)
+
+
+@dataclass
 class Shop:
     intro: str
     categories: list[Category]
+    alerts: list[Alert]
 
     @property
     def intro_md(self):

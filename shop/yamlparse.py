@@ -7,7 +7,17 @@ def is_parsable(data, obj_type):
     if type(data) is not dict:
         return type(data) is obj_type
     # If dict
-    return set(data.keys()) == set(field.name for field in dataclasses.fields(obj_type))
+    fields = dataclasses.fields(obj_type)
+    minimum = set(
+        field.name
+        for field in fields
+        if field.default == dataclasses.MISSING
+        and field.default_factory == dataclasses.MISSING
+    )
+    maximum = set(field.name for field in fields)
+
+    data_names = set(data.keys())
+    return maximum.issuperset(data_names) and minimum.issubset(data_names)
 
 
 def is_parsable_list(data, list_type):

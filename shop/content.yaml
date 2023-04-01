@@ -2,6 +2,12 @@ shop:
   intro: |
     # Welcome to UWCS Shop
     Find some items listed below, yay
+  alerts:
+    - title: Testing Alerts
+      desc: Testing some alerts, let's pretend we have 10 minutes left!
+      type: warning
+    - title: Testing Fine
+      desc: Testing some alerts, let's pretend we have ages left!
   categories:
     - name: "Hoodies"
       items:

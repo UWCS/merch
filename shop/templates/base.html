@@ -47,9 +47,9 @@
 
     <header class="w-100 d-flex flex-column gap-3 px-3">
       {% for alert in shop.alerts %}
-      <div class="alert alert-success px-3 py-2 mt-3 mb-0" role="alert">
+      <div class="alert alert-{{ alert.type }} px-3 py-2 mt-3 mb-0" role="alert">
         {% if alert.title %}<h5 class="alert-heading">{{ alert.title }}</h5>{% endif %}
-        {% if alert.text %}{{ alert.text }}</h4>{% endif %}
+        {% if alert.desc %}{{ alert.desc_md|safe }}{% endif %}
       </div>
       {% endfor %}
     </header>
