@@ -45,7 +45,7 @@ def parse_dict_to_dataclasses(data, obj_type):
     else:
         if type(data) is not dict and type(data) is obj_type:
             # Parse 'primitive'
-            return data
+            return obj_type(data)
         if is_parsable(data, obj_type):
             # Parse class
             types = {field.name: field.type for field in dataclasses.fields(obj_type)}
