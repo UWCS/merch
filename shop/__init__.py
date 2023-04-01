@@ -3,8 +3,6 @@ import os
 
 from flask import Flask
 
-from .database import db, migrate
-
 logging.basicConfig(
     level=logging.getLevelName("INFO"),
     format="[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s",
@@ -22,9 +20,6 @@ def create_app() -> Flask:
         MAX_CONTENT_LENGTH=30 * 1000 * 1000,  # 20mb,
         SQLALCHEMY_DATABASE_URI=os.environ["DATABASE_URL"],
     )
-
-    db.init_app(app)
-    migrate.init_app(app, db)
 
     from . import routes
 

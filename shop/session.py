@@ -1,2 +1,0 @@
-USERNAME_SESSION_KEY = "username"
-SHOP_SESSION_KEY = "shop"

@@ -2,22 +2,21 @@
 
 {% block title %}Home{% endblock %}
 
-{% macro shop_badge(shop) -%}
-{% set visibility = shop.visible|string() %}
-{% if visibility == "Open" %}{% set row_color = 'text-bg-success' %}
-{% elif visibility == "Closed" %}{% set row_color = 'text-bg-danger' %}
-{% else %}{% set row_color = "text-bg-warning" %}
-{% endif %}
-<small class="badge {{ row_color }}">{{ shop.visible }}</small>
-{%- endmacro %}
-
 {% block content %}
 
-<div class="d-flex justify-content-center m-5">
-    {% for item in items %}
-    {% with item=item %}
+{% set index = namespace(value=0) %}
+<div class="row justify-content-center m-5">
+    {% for category in shop.categories %}
+    <h1>{{ category.name }}</h1>
+    {% for item in category.items %}
+    {% with item=item, i=index.value %}
     {% include 'card.html' %}
     {% endwith %}
+    {% set index.value = index.value + 1 %}
+    {% endfor %}
+    <br>
+    <hr>
+    <br>
     {% endfor %}
 </div>
 

@@ -1,0 +1,41 @@
+shop:
+  intro: |
+    # Welcome to UWCS Shop
+    Find some items listed below, yay
+  categories:
+    - name: "Hoodies"
+      items:
+        - title: Pullover Hoodie
+          desc: |
+            Pull-over (non-zipped) hoodie, with The UWCS shield logo printed on the chest, "Warwick Computing" down a sleeve, and the UWCS dots logo on the other.
+          images:
+            - https://i.imgur.com/0FI7dkM.png
+            - https://picsum.photos/500
+            - https://picsum.photos/500
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Zipped Hoodie
+          desc: |
+            Zipped hoodie with the UWCS shield logo printed on the chest, "Warwick Computing" down a sleeve, and the UWCS dots logo on the other.
+          images:
+            - https://i.imgur.com/O0y1zZO.png
+            - https://picsum.photos/500
+            - https://picsum.photos/500
+          buy: https://github.com/UWCS/progcomp-web
+    - name: "T-Shirts"
+      items:
+        - title: Black T-Shirt
+          desc: |
+            Plain black T-shirt with an all-white version of our dots logo.
+          images:
+            - https://i.imgur.com/vXMrKBa.png
+            - https://picsum.photos/500
+            - https://picsum.photos/500
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Grey T-Shirt
+          desc: |
+            Grey T-shirt with our blue and yellow dots logo.
+          images:
+            - https://i.imgur.com/WqN910a.png
+            - https://picsum.photos/500
+            - https://picsum.photos/500
+          buy: https://github.com/UWCS/progcomp-web
