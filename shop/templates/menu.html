@@ -8,20 +8,33 @@
 
 {% block content %}
 
-{% set index = namespace(value=0) %}
-<div class="row justify-content-center m-5">
-    {% for category in shop.categories %}
-    <h1>{{ category.name }}</h1>
-    {% for item in category.items %}
-    {% with item=item, i=index.value %}
-    {% include 'card.html' %}
-    {% endwith %}
-    {% set index.value = index.value + 1 %}
-    {% endfor %}
-    <br>
-    <hr>
-    <br>
-    {% endfor %}
-</div>
+<div class="m-4">
+    {{ shop.intro_md|safe }}
 
+    {% set index = namespace(value=0) %}
+    <div class="accordion" id="main-accordion">
+        {% for category in shop.categories %}
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse{{ index.value }}"
+                    aria-expanded="{% if loop.first %}true{% else %}false{% endif %}"
+                    aria-controls="collapse{{ index.value }}">
+                    {{ category.name }}
+                </button>
+            </h2>
+            <div id="collapse{{ index.value }}" class="accordion-collapse collapse {% if loop.first %}show{% endif %}">
+                <div class="accordion-body">
+                    {% for item in category.items %}
+                    {% with item=item, i=index.value %}
+                    {% include 'card.html' %}
+                    {% endwith %}
+                    {% set index.value = index.value + 1 %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
