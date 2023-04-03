@@ -10,13 +10,9 @@ WORKDIR /app
 
 RUN /root/.local/bin/pipenv sync
 
-COPY src src
-COPY resources resources
-COPY content content
-COPY templates templates
-COPY build.py build.py
+COPY shop shop
 
-RUN /root/.local/bin/pipenv run python build.py
+RUN /root/.local/bin/pipenv run python shop/static/render.py
 
 FROM nginx:alpine
 
