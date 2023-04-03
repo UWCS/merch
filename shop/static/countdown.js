@@ -33,7 +33,7 @@ const setIntervals = function (cd_t, ut_t, q) {
 }
 
 var quick = null;
-var x, cds, openElems = [], closedElems = [];
+var x, cds, openElems = [], closedElems = [], alerts = [];
 var prevOpen = null;
 
 // Update the count down every minute
@@ -81,7 +81,7 @@ const countdown = function () {
         }
     }
 
-    const open = startDate <= now && now <= endDate;
+    const open = startDate <= now && now < endDate;
     if (open != prevOpen) {
         for (let elem of openElems) {
             elem.hidden = !open;
@@ -91,12 +91,26 @@ const countdown = function () {
         }
     }
 
+    for (let elem of alerts) {
+        if (elem.dataset.start !== undefined && elem.dataset.end !== undefined && elem.dataset.start !== "0") {
+            console.log(elem, elem.dataset.start, elem.dataset.end);
+            const s = new Date(elem.dataset.start);
+            const e = new Date(elem.dataset.end);
+            elem.hidden = !(s < now && now < e);
+            console.log(s < now && now < e);
+            console.log(s, e, elem.hidden);
+        } else {
+            elem.hidden = false;
+        }
+    }
+
 };
 
 window.addEventListener('load', () => {
     cds = document.getElementsByClassName("countdown");
     openElems = document.getElementsByClassName("while-open");
     closedElems = document.getElementsByClassName("while-closed");
+    alerts = document.getElementsByClassName("alert");
     console.log(cds, openElems, closedElems);
     countdown()
 });
