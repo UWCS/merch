@@ -16,16 +16,14 @@ shop:
             Pull-over (non-zipped) hoodie, with The UWCS shield logo printed on the chest, "Warwick Computing" down a sleeve, and the UWCS dots logo on the other.
           images:
             - https://i.imgur.com/0FI7dkM.png
-            - https://picsum.photos/500
-            - https://picsum.photos/500
+          price: £15
           buy: https://github.com/UWCS/progcomp-web
         - title: Zipped Hoodie
           desc: |
             Zipped hoodie with the UWCS shield logo printed on the chest, "Warwick Computing" down a sleeve, and the UWCS dots logo on the other.
           images:
             - https://i.imgur.com/O0y1zZO.png
-            - https://picsum.photos/500
-            - https://picsum.photos/500
+          price: £20
           buy: https://github.com/UWCS/progcomp-web
     - name: "T-Shirts"
       items:
@@ -34,14 +32,56 @@ shop:
             Plain black T-shirt with an all-white version of our dots logo.
           images:
             - https://i.imgur.com/vXMrKBa.png
-            - https://picsum.photos/500
-            - https://picsum.photos/500
+          price: £6
           buy: https://github.com/UWCS/progcomp-web
         - title: Grey T-Shirt
           desc: |
             Grey T-shirt with our blue and yellow dots logo.
+          price: £6
           images:
             - https://i.imgur.com/WqN910a.png
-            - https://picsum.photos/500
-            - https://picsum.photos/500
+          buy: https://github.com/UWCS/progcomp-web
+    - name: "Mousepads"
+      items:
+        - title: Mouse Pad
+          desc: A UWCS Print Mouse Pad at size 26x21cm. Plenty of space for your average user!
+          images:
+            - https://i.imgur.com/smUIawm.png
+          price: £20
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Desk Pad
+          desc: A UWCS Print Mouse Pad at size 90x40cm. For when you want to cover up the whole of your ugly desk!
+          images:
+            - https://i.imgur.com/x2VbCGM.png
+          price: £30
+          buy: https://github.com/UWCS/progcomp-web
+    - name: Smaller Bits
+      items:
+        - title: Sticker Pack
+          desc: Sticker Pack with a range of UWCS and cursed meme stickers in
+          images:
+            - https://i.imgur.com/7fRc0qU.png
+            - https://i.imgur.com/VqoKboG.png
+          price: £4
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Card Deck
+          desc: A UWCS Print deck of 54 standard cards. Who doesn't love a good goose or blahaj Joker?
+          images:
+            - https://i.imgur.com/I26A41D.png
+            - https://i.imgur.com/RRLAlZR.png
+          price: £10
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Programming Socks
+          desc: Embrace the meme and go full programmer, with this lovely colour co-ordinated thigh-high socks!
+          images:
+            - https://i.imgur.com/h0ikhXQ.png
+          price: £3
+          buy: https://github.com/UWCS/progcomp-web
+    - name: Milk Mondays
+      items:
+        - title: Milk Mug
+          desc: Fill your mug with some milk!
+          images:
+            - https://cdn.discordapp.com/attachments/1079131530057748501/1089204407951962292/Screenshot_2023-03-25_at_15.09.06.png
+          price: £5
           buy: https://github.com/UWCS/progcomp-web

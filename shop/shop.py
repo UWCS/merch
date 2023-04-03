@@ -9,6 +9,7 @@ class Item:
     desc: str
     images: list[str]
     buy: str
+    price: str
 
     @property
     def desc_md(self):
