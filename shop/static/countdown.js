@@ -28,15 +28,12 @@ const listStrNonEmpty = function (parts, max_numb) {
 const setIntervals = function (cd_t, ut_t, q) {
     if (quick == q) return;
     clearInterval(x);
-    clearInterval(y);
     x = setInterval(countdown, cd_t * 1000);
-    y = setInterval(updateTarget, ut_t * 1000);
     quick = q;
 }
 
-var targetDate = new Date(Cookies.get("end_time"));
 var quick = null;
-var x, y, cd;
+var x, cd;
 
 // Update the count down every minute
 const countdown = function () {
@@ -46,7 +43,7 @@ const countdown = function () {
     const now = new Date().getTime();
     const distance = targetDate - now;
     if (distance < 0) {
-        cd.innerHTML = "Competition now ended!";
+        cd.innerHTML = "Shop now closed!";
         if (quick != "ended" && quick != null) location.reload()
         setIntervals(60, 300, "ended");
     } else {
@@ -77,21 +74,6 @@ const countdown = function () {
     }
 
 };
-
-const updateTarget = function () {
-    fetch("/poll")
-        .then((r) => r.json())
-        .then((json) => {
-            const newDate = new Date(Number(json["end_time"]) * 1000);
-            if (newDate != targetDate) {
-                targetDate = newDate;
-                Cookies.set("end_time", newDate.getTime(), { SameSite: "Strict" });
-                countdown();
-            }
-        });
-}
-
-updateTarget();
 
 window.addEventListener('load', () => {
     cd = document.getElementById("countdown");

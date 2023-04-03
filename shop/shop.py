@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import datetime
 
 from markdown import markdown
 
@@ -34,7 +35,19 @@ class Alert:
 
 
 @dataclass
+class TimeEvent:
+    date: str
+    desc: str
+
+    @property
+    def desc_md(self):
+        return markdown(self.desc)
+
+
+@dataclass
 class Shop:
+    start: TimeEvent
+    end: TimeEvent
     intro: str
     categories: list[Category]
     alerts: list[Alert]

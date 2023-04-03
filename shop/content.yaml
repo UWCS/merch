@@ -1,4 +1,10 @@
 shop:
+  start:
+    date: "2023-04-09T13:00:00Z"
+    desc: UWCS Shop opening soon!
+  end:
+    date: "2023-04-21T13:00:00Z"
+    desc: UWCS Shop now closed!
   intro: |
     # Welcome to UWCS Shop
     Find some items listed below, yay
