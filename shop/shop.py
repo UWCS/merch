@@ -28,16 +28,8 @@ class Alert:
     title: str
     desc: str
     type: str = "success"
-
-    @property
-    def desc_md(self):
-        return markdown(self.desc)
-
-
-@dataclass
-class TimeEvent:
-    date: str
-    desc: str
+    start: str = 0
+    end: str = "2030-01-01T00:00:00Z"
 
     @property
     def desc_md(self):
@@ -46,8 +38,8 @@ class TimeEvent:
 
 @dataclass
 class Shop:
-    start: TimeEvent
-    end: TimeEvent
+    start: str
+    end: str
     intro: str
     categories: list[Category]
     alerts: list[Alert]

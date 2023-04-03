@@ -33,22 +33,27 @@ const setIntervals = function (cd_t, ut_t, q) {
 }
 
 var quick = null;
-var x, cd;
+var x, cds, openElems = [], closedElems = [];
+var prevOpen = null;
 
 // Update the count down every minute
 const countdown = function () {
-    if (!targetDate || !cd) return
+    if (!cds) return
 
     // Find the distance between now and the count down date
     const now = new Date().getTime();
+    targetDate = now <= startDate ? startDate : endDate;
     const distance = targetDate - now;
     if (distance < 0) {
-        cd.innerHTML = "Shop now closed!";
+        for (let cd of cds) {
+            cd.innerHTML = "Shop now closed!";
+        }
         if (quick != "ended" && quick != null) location.reload()
         setIntervals(60, 300, "ended");
     } else {
         // Time calculations for days, hours, minutes and seconds
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById("countdown-alert").hidden = days >= 3
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / (1000));
@@ -61,7 +66,10 @@ const countdown = function () {
         time_rem_str = listStrNonEmpty([daysText, hoursText, minutesText, secondsText], 2);
         if (days >= 7) time_rem_str = daysText;
 
-        cd.innerHTML = `${time_rem_str} remaining`;
+        for (let cd of cds) {
+            const prompt = now <= startDate ? "opening" : "closing"
+            cd.innerHTML = `${time_rem_str} until ${prompt}`;
+        }
 
         // Set update time
         if (days > 0) {
@@ -73,9 +81,22 @@ const countdown = function () {
         }
     }
 
+    const open = startDate <= now && now <= endDate;
+    if (open != prevOpen) {
+        for (let elem of openElems) {
+            elem.hidden = !open;
+        }
+        for (let elem of closedElems) {
+            elem.hidden = open;
+        }
+    }
+
 };
 
 window.addEventListener('load', () => {
-    cd = document.getElementById("countdown");
+    cds = document.getElementsByClassName("countdown");
+    openElems = document.getElementsByClassName("while-open");
+    closedElems = document.getElementsByClassName("while-closed");
+    console.log(cds, openElems, closedElems);
     countdown()
 });

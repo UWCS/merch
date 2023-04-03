@@ -34,8 +34,8 @@ def get_shop() -> Shop:
     global last_edit
     mtime = os.path.getmtime(content_path)
     if mtime > last_edit or _shop is None:
-        f = open(content_path)
-        raw = yaml.safe_load(f)
+        with open(content_path, encoding="utf8") as f:
+            raw = yaml.safe_load(f)
 
         _shop = shop.yamlparse.parse_dict_to_dataclasses(raw["shop"], Shop)
         last_edit = mtime

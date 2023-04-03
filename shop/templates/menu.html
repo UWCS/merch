@@ -2,9 +2,6 @@
 
 {% block head %}
 <link rel="stylesheet" href="static/custom.css">
-<script>
-    var targetDate = new Date("{{ shop.end.date }}");
-</script>
 <script src="static/countdown.js"></script>
 {% endblock %}
 
@@ -12,11 +9,16 @@
 
 {% block content %}
 
+<script>
+    var startDate = new Date("{{ shop.start }}");
+    var endDate = new Date("{{ shop.end }}");
+</script>
+
 <div class="m-4">
     {{ shop.intro_md|safe }}
 
     {% set index = namespace(value=0) %}
-    <div class="accordion" id="main-accordion">
+    <div class="accordion while-open" id="main-accordion">
         {% for category in shop.categories %}
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -39,6 +41,9 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="while-closed">
+        UWCS Shop opening soon!
     </div>
 </div>
 {% endblock %}
