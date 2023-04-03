@@ -15,9 +15,16 @@ def is_parsable(data, obj_type):
         and field.default_factory == dataclasses.MISSING
     )
     maximum = set(field.name for field in fields)
-
     data_names = set(data.keys())
-    return maximum.issuperset(data_names) and minimum.issubset(data_names)
+    if not maximum.issuperset(data_names):
+        raise Exception(
+            f"Excess fields {data_names - maximum} for type {obj_type} in data {data}"
+        )
+    if not minimum.issubset(data_names):
+        raise Exception(
+            f"Missing fields {minimum - data_names} for type {obj_type} in data {data}"
+        )
+    return True
 
 
 def is_parsable_list(data, list_type):
