@@ -2,7 +2,6 @@ FROM python:3.10 AS builder
 
 RUN pip install --user pipenv
 
-# Tell pipenv to create venv in the current directory
 ENV PIPENV_VENV_IN_PROJECT=1
 
 COPY Pipfile.lock /app/Pipfile.lock
@@ -11,14 +10,15 @@ WORKDIR /app
 
 RUN /root/.local/bin/pipenv sync
 
-FROM python:3.10 AS runtime
+COPY src src
+COPY resources resources
+COPY content content
+COPY templates templates
+COPY build.py build.py
 
-# copy deps into runtime container
-RUN mkdir -pv /app/.venv
-COPY --from=builder /app/.venv/ /app/.venv/
+RUN /root/.local/bin/pipenv run python build.py
 
-# copy in python sources
-COPY shop /app/shop
+FROM nginx:alpine
 
-WORKDIR /app
-CMD ["./.venv/bin/gunicorn", "--chdir", "/app", "shop:app",  "-w", "4", "-b", "0.0.0.0:8080"]
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/build/ /usr/share/nginx/html
