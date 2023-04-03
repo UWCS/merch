@@ -1,17 +1,17 @@
 shop:
-  start: "2023-04-04T13:00:00+01:00"
+  start: "2023-04-03T13:00:00+01:00"
   end: "2023-04-21T13:00:00+01:00"
   intro: |
     # Welcome to UWCS Shop
     Find some items listed below, yay
   alerts:
     - title: Testing Alerts
-      desc: Dawn of the Final Day
-      start: "2023-04-04T00:31:00+01:00"
-      end: "2023-04-04T00:33:00+01:00"
+      desc: Testing some alerts, this should exist for only a bit
+      start: "2023-04-03T00:31:00+01:00"
+      end: "2023-04-10T00:33:00+01:00"
       type: warning
     - title: Testing Fine
-      desc: Testing some alerts, let's pretend we have ages left!
+      desc: Testing some alerts, this should exist forever
   categories:
     - name: "Hoodies"
       items:
