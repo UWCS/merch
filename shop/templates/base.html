@@ -52,7 +52,8 @@
         This shop has <span class="countdown"></span>.
       </div>
       {% for alert in shop.alerts %}
-      <div class="alert alert-{{ alert.type }} px-3 py-2 mt-3 mb-0" role="alert">
+      <div class="alert alert-{{ alert.type }} px-3 py-2 mt-3 mb-0" role="alert" data-start="{{ alert.start }}"
+        data-end="{{ alert.end }}" hidden>
         {% if alert.title %}<h5 class="alert-heading">{{ alert.title }}</h5>{% endif %}
         {% if alert.desc %}{{ alert.desc_md|safe }}{% endif %}
       </div>
