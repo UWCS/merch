@@ -7,4 +7,4 @@ submissions/**
 
 __pycache__
 /instance
-/build
+build

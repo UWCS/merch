@@ -2,6 +2,10 @@
 
 {% block head %}
 <link rel="stylesheet" href="static/custom.css">
+<script>
+    var targetDate = new Date("{{ shop.end.date }}");
+</script>
+<script src="static/countdown.js"></script>
 {% endblock %}
 
 {% block title %}Home{% endblock %}
