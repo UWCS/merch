@@ -33,7 +33,7 @@ shop:
           desc: |
             OwO what's this?
 
-            Unleash your full programming potential with these lovely, colour-coordinated, thigh-high socks! Guaranteed to increase your mark by at least 10* percentage points across all modules. They only come in a single size, but it should be more than large enough. I wanted to call these CompSocks but they wouldn't let me - Keegan
+            Unleash your full programming potential with these lovely, colour-coordinated, thigh-high socks! Guaranteed to increase your mark by at least 10* percentage points across all modules. They only come in a single size, but they are quite stretchy. I wanted to call these CompSocks but they wouldn't let me - Keegan
 
             *may not actually increase grades, we haven't done a scientific study
           images:
@@ -72,7 +72,7 @@ shop:
           desc: |
             For when a T-Shirt doesn't quite protect you from the elements, introducing our brand new, state of the art, never seen before invention - a pull-over hoodie! We have "Warwick Computing" down the sleeve to show how utterly irresistible you are to everyone, the dots logo on the other, and the society's shield logo on the chest of this comfortable hoodie.
 
-            (Base colour has been updated to be closer to our grey)
+            (Base colour has been updated to be closer to our grey)  
             (Size options can be chosen at checkout)
           images:
             - https://i.imgur.com/0FI7dkM.png
@@ -83,11 +83,19 @@ shop:
           desc: |
             Turns out adding a zip actually bumps up the cost a fair bit. Even so, it's an excellent alternative to awkwardly trying to take the hoodie off in public. As with the other design, we have "Warwick Computing" down one sleeve, the dots logo on the other, and the society's shield logo on the chest of this comfortable hoodie.
 
-            (Base colour has been updated to be closer to our grey)
+            (Base colour has been updated to be closer to our grey)  
             (Size options can be chosen at checkout)
           images:
             - https://i.imgur.com/O0y1zZO.png
             - https://i.imgur.com/7IshGuf.png
+          price: £20
+          buy: https://github.com/UWCS/progcomp-web
+        - title: Sweatshirt
+          desc: |
+            <Need to write description>
+
+            (Size options can be chosen at checkout)
+          images: []
           price: £20
           buy: https://github.com/UWCS/progcomp-web
     - name: "T-Shirts"
@@ -126,19 +134,23 @@ shop:
       items:
         - title: Desk Pad
           desc: |
-            Go big or go home. A desk-spanning mouse pad at 90x40cm, which is over 6x larger than the standard one! As before, it comes with the option of three designs - minimal particles, shield with particles, and one that looks suspiciously like it was intended to be a Discord invite background, but looks cool regardless. We know they're on the more expensive side, but they're high-quality too.
+            Go big or go home. A desk-spanning mouse pad at 90x40cm, which is over 6x larger than the standard one! It comes with the option of two designs - minimal particles, and shield with particles. These are very high-quality with proper stiched edges.
 
             (Design options can be chosen at checkout)
           images:
-            - https://i.imgur.com/x2VbCGM.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221136160010270/Deskpads.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221136919183380/Deskpad_Minimal.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221136508129351/Deskpad_Shield.png
           price: £30
           buy: https://github.com/UWCS/progcomp-web
         - title: Mouse Pad
           desc: |
-            Custom mouse pads, anyone? This one is 26x21cm, which should be plenty of space for your average user. It comes with the option of three designs - minimal particles, shield with particles, and one that looks suspiciously like it was intended to be a Discord invite background, but looks cool regardless. We know they're on the more expensive side, but they're high-quality too.
+            Custom mouse pads, anyone? This one is 26x21cm, which should be plenty of space for your average user. It comes with the option of two designs - minimal particles, shield with particles. We know they're on the more expensive side, but they're high-quality too.
 
             (Design options can be chosen at checkout)
           images:
-            - https://i.imgur.com/smUIawm.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221135908343869/Frame_278.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221135681859634/Mousepad_Minimal.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093221137330221086/Mousepad_Shield.png
           price: £20
           buy: https://github.com/UWCS/progcomp-web
