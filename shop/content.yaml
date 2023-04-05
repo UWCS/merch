@@ -5,13 +5,14 @@ shop:
     # Welcome to UWCS Shop
     Find some items listed below, yay
   alerts:
-    - title: Testing Alerts
-      desc: Testing some alerts, this should exist for only a bit
-      start: "2023-04-03T00:31:00+01:00"
-      end: "2023-04-10T00:33:00+01:00"
-      type: warning
-    - title: Testing Fine
-      desc: Testing some alerts, this should exist forever
+    []
+    # - title: Testing Alerts
+    #   desc: Testing some alerts, this should exist for only a bit
+    #   start: "2023-04-03T00:31:00+01:00"
+    #   end: "2023-04-10T00:33:00+01:00"
+    #   type: warning
+    # - title: Testing Fine
+    #   desc: Testing some alerts, this should exist forever
   categories:
     - name: "Hoodies"
       items:
