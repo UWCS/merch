@@ -18,7 +18,6 @@ def create_app() -> Flask:
     app.config.from_mapping(
         SECRET_KEY="dev",
         MAX_CONTENT_LENGTH=30 * 1000 * 1000,  # 20mb,
-        SQLALCHEMY_DATABASE_URI=os.environ["DATABASE_URL"],
     )
 
     from . import routes

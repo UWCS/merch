@@ -62,10 +62,16 @@ shop:
     - name: Smaller Bits
       items:
         - title: Sticker Pack
-          desc: Sticker Pack with a range of UWCS and cursed meme stickers in
+          desc: |
+            Do you like stickers? We have a lot of them. The mega sticker pack includes a wide array of high-quality designs, with sizes ranging from 5-8cm wide. Whether you're looking to slap these bad boys on the back of your laptop, want to show off the superiority of "GitHub" on the fridge, or brand someone with the mark of UWUCS, now's your chance!
+
+            **Includes:**  
+            **Standalone:** UWCS Shield, *Glitter* UWCS Pride Shield, and an Optional UWCS Rust Shield  
+            **A5 Sticker Sheet:** UWCS Dots, UWCS Retro, UWCS Goose, Milk Mondays Blahaj Society Shield, UWUCS Shield, WASD 2023 Logo, Ferris x Go, Windows 10 x Arch, VS Code x Vim, GitHub x (you get the idea)
           images:
-            - https://i.imgur.com/7fRc0qU.png
-            - https://i.imgur.com/VqoKboG.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1092972372891553952/Sticker_Sheet_26.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1092972373231271956/Sticker_Sheet_25.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1092972373470363728/Frame_274.png
           price: £4
           buy: https://github.com/UWCS/progcomp-web
         - title: Card Deck
