@@ -23,6 +23,7 @@ shop:
             (Size options can be chosen at checkout)
           images:
             - https://i.imgur.com/0FI7dkM.png
+            - https://i.imgur.com/7IshGuf.png
           price: £15
           buy: https://github.com/UWCS/progcomp-web
         - title: Zipped Hoodie
@@ -32,6 +33,7 @@ shop:
             (Size options can be chosen at checkout)
           images:
             - https://i.imgur.com/O0y1zZO.png
+            - https://i.imgur.com/7IshGuf.png
           price: £20
           buy: https://github.com/UWCS/progcomp-web
     - name: "T-Shirts"
@@ -44,6 +46,7 @@ shop:
           price: £6
           images:
             - https://i.imgur.com/WqN910a.png
+            - https://i.imgur.com/xcwQL60.png
           buy: https://github.com/UWCS/progcomp-web
         - title: Black T-Shirt
           desc: |
@@ -52,6 +55,17 @@ shop:
             (Size options can be chosen at checkout)
           images:
             - https://i.imgur.com/vXMrKBa.png
+            - https://i.imgur.com/xcwQL60.png
+          price: £6
+          buy: https://github.com/UWCS/progcomp-web
+        - title: White T-Shirt
+          desc: |
+            "this goes even harder" - Joey
+
+            (Size options can be chosen at checkout)
+          images:
+            - https://i.imgur.com/EbiRM0T.png
+            - https://i.imgur.com/xcwQL60.png
           price: £6
           buy: https://github.com/UWCS/progcomp-web
     - name: "Mousepads"
