@@ -154,3 +154,11 @@ shop:
             - https://cdn.discordapp.com/attachments/848877068845318205/1093221137330221086/Mousepad_Shield.png
           price: £20
           buy: https://github.com/UWCS/progcomp-web
+    - name: "Wildcards"
+      items:
+        - title: Wildcards Tote Bag
+          desc: |
+            <Need to write description>
+          images: []
+          price: £5
+          buy: https://github.com/UWCS/progcomp-web
