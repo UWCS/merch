@@ -37,7 +37,7 @@ shop:
 
             *may not actually increase grades, we haven't done a scientific study
           images:
-            - https://i.imgur.com/h0ikhXQ.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093572422000713728/socks.png
           price: £3
           buy: https://github.com/UWCS/progcomp-web
         - title: Badge Pack
@@ -75,7 +75,7 @@ shop:
             (Base colour has been updated to be closer to our grey)  
             (Size options can be chosen at checkout)
           images:
-            - https://i.imgur.com/0FI7dkM.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093568857660215316/hood.png
             - https://i.imgur.com/7IshGuf.png
           price: £15
           buy: https://github.com/UWCS/progcomp-web
@@ -86,7 +86,7 @@ shop:
             (Base colour has been updated to be closer to our grey)  
             (Size options can be chosen at checkout)
           images:
-            - https://i.imgur.com/O0y1zZO.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093568857098174484/zip.png
             - https://i.imgur.com/7IshGuf.png
           price: £20
           buy: https://github.com/UWCS/progcomp-web
@@ -95,7 +95,8 @@ shop:
             <Need to write description>
 
             (Size options can be chosen at checkout)
-          images: []
+          images:
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093569665986473984/sweat.png
           price: £20
           buy: https://github.com/UWCS/progcomp-web
     - name: "T-Shirts"
@@ -107,7 +108,7 @@ shop:
             (Size options can be chosen at checkout)
           price: £6
           images:
-            - https://i.imgur.com/WqN910a.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093568858146746470/grey.png
             - https://i.imgur.com/xcwQL60.png
           buy: https://github.com/UWCS/progcomp-web
         - title: Black T-Shirt
@@ -116,7 +117,7 @@ shop:
 
             (Size options can be chosen at checkout)
           images:
-            - https://i.imgur.com/vXMrKBa.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093568858394214420/black.png
             - https://i.imgur.com/xcwQL60.png
           price: £6
           buy: https://github.com/UWCS/progcomp-web
@@ -126,7 +127,7 @@ shop:
 
             (Size options can be chosen at checkout)
           images:
-            - https://i.imgur.com/EbiRM0T.png
+            - https://cdn.discordapp.com/attachments/848877068845318205/1093568920755109908/white.png
             - https://i.imgur.com/xcwQL60.png
           price: £6
           buy: https://github.com/UWCS/progcomp-web
