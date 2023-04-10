@@ -1,6 +1,7 @@
 <div class="card p-0 m-4">
-    <div class="d-flex">
-        <div id="carousel-{{ i }}" class="carousel slide w-100 rounded-start overflow-hidden" style="">
+    <div class="d-flex align-items-center">
+        <div id="carousel-{{ i }}" class="carousel zoom slide rounded-start w-100 h-100 overflow-hidden"
+            style="aspect-ratio: 1 / 1">
             <div class="carousel-inner">
                 {% for image in item.images %}
                 <div class="carousel-item {% if loop.first %} active{% endif %}" {% if not loop.first %} loading="lazy"
