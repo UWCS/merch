@@ -38,6 +38,7 @@ class Alert:
 
 @dataclass
 class Shop:
+    preview: bool
     start: str
     end: str
     intro: str

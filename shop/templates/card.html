@@ -34,9 +34,11 @@
                         {{ item.desc_md|safe }}
                     </div>
                 </div>
+                {% if not shop.preview %}
                 <a class="btn btn-primary btn-lg" href="{{ item.buy }}">
                     <i class="bi-cart-fill"></i> Buy for {{ item.price }} @ Warwick SU
                 </a>
+                {% endif %}
             </div>
         </div>
     </div>
