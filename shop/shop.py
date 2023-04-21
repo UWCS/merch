@@ -38,12 +38,12 @@ class Alert:
 
 @dataclass
 class Shop:
-    preview: bool
     start: str
     end: str
     intro: str
     categories: list[Category]
     alerts: list[Alert]
+    preview: bool = False
 
     @property
     def intro_md(self):

@@ -84,7 +84,7 @@ const countdown = function () {
     const open = startDate <= now && now < endDate;
     if (open != prevOpen) {
         for (let elem of openElems) {
-            elem.hidden = !open;
+            elem.hidden = (!open && !preview);
         }
         for (let elem of closedElems) {
             elem.hidden = open;
