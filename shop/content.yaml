@@ -51,7 +51,7 @@ shop:
             *may not actually increase grades, we haven't done a scientific study
           images:
             - https://cdn.discordapp.com/attachments/848877068845318205/1093572422000713728/socks.png
-          price: £2.40
+          price: £1.48
           buy: https://github.com/UWCS/progcomp-web
         - title: Milk Mug
           desc: Fill your mug with some milk!
