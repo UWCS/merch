@@ -176,12 +176,12 @@ shop:
             - https://cdn.discordapp.com/attachments/848877068845318205/1098756672467517550/7IshGuf.png
           price: £30
           buy: https://github.com/UWCS/progcomp-web
-        - title: "[EXEC] 1/4 Zip Sweatshirts"
-          desc: |
-            **Need to write description**
+#         - title: "[EXEC] 1/4 Zip Sweatshirts"
+#           desc: |
+#             **Need to write description**
 
-            (Size options can be chosen at checkout)
-          images:
-            - https://cdn.discordapp.com/attachments/848877068845318205/1098755794696142878/image.png
-          price: £10
-          buy: https://github.com/UWCS/progcomp-web
+#             (Size options can be chosen at checkout)
+#           images:
+#             - https://cdn.discordapp.com/attachments/848877068845318205/1098755794696142878/image.png
+#           price: £10
+#           buy: https://github.com/UWCS/progcomp-web
