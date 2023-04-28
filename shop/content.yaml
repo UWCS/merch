@@ -1,7 +1,7 @@
 shop:
   preview: true
-  start: "2023-05-1T13:00:00+01:00"
-  end: "2023-05-08T13:00:00+01:00"
+  start: "2023-05-01T12:00:00+01:00"
+  end: "2023-05-08T12:00:00+01:00"
   intro: |
     # Welcome to UWCS Shop
     Greetings, valued members of the University of Warwick Computing Society! It is my pleasure to welcome you to our very own Uwcs Shop - your one-stop destination for all things tech-y and chic. 
