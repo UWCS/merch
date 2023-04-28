@@ -14,7 +14,13 @@ shop:
 
     So what are you waiting for? Browse our range online, or visit us in person to get your hands on the latest tech gear. Trust us, you won't be disappointed. Thank you for choosing Uwcs Shop - where tech meets fashion!
 
+    ***
+
     Unfortunately, last year, the SU got annoyed at us subsidising you guys' merch, **so we have to sell exactly at cost**. We are not allowed to subsidise or profit on anything, except we are allowed to subsidise exec hoodies and give away free non-clothing items, go figure.
+
+    Also note some of the images on the SU's site are from last year, and so out of date. **The versions on this site are correct.**
+
+    ***
   alerts:
     []
     # - title: Testing Alerts
@@ -52,7 +58,7 @@ shop:
           images:
             - https://cdn.discordapp.com/attachments/848877068845318205/1093572422000713728/socks.png
           price: £1.48
-          buy: https://www.warwicksu.com/shop/product/10211800/
+          buy: https://www.warwicksu.com/shop/product/10211830/
         - title: Milk Mug
           desc: Fill your mug with some milk!
           images:
