@@ -1,5 +1,5 @@
 shop:
-  preview: true
+  preview: false
   start: "2023-05-01T12:00:00+01:00"
   end: "2023-05-08T12:00:00+01:00"
   intro: |
@@ -39,8 +39,8 @@ shop:
             **Standalone:** UWCS Shield, *Glitter* UWCS Pride Shield, and an Optional UWCS Rust Shield  
             **A5 Sticker Sheet:** UWCS Dots, UWCS Retro, UWCS Goose, Milk Mondays Blahaj Society Shield, UWUCS Shield, WASD 2023 Logo, Ferris x Go, Windows 10 x Arch, VS Code x Vim, GitHub x (you get the idea)
           images:
-            - https://cdn.discordapp.com/attachments/848877068845318205/1092972372891553952/Sticker_Sheet_26.png
-            - https://cdn.discordapp.com/attachments/848877068845318205/1092972373231271956/Sticker_Sheet_25.png
+            - https://cdn.discordapp.com/attachments/780439117959659580/1102555848703737936/image.png
+            - https://cdn.discordapp.com/attachments/780439117959659580/1102556260898967624/image.png
             - https://cdn.discordapp.com/attachments/848877068845318205/1092972373470363728/Frame_274.png
           price: £3.23
           buy: https://www.warwicksu.com/shop/product/10211800/
