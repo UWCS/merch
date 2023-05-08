@@ -89,6 +89,7 @@ const countdown = function () {
         for (let elem of closedElems) {
             elem.hidden = open;
         }
+        document.getElementById("countdown-alert").innerHTML = "Shop now closed!";
     }
 
     for (let elem of alerts) {
@@ -97,8 +98,6 @@ const countdown = function () {
             const s = new Date(elem.dataset.start);
             const e = new Date(elem.dataset.end);
             elem.hidden = !(s < now && now < e);
-            console.log(s < now && now < e);
-            console.log(s, e, elem.hidden);
         } else {
             elem.hidden = false;
         }
